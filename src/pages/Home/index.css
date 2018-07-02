@@ -1,7 +1,17 @@
-
+@font-face {
+    font-family: 'Simpson';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Simpson'), local('Simpson'),
+         url('/fonts/simpsonfont-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/simpsonfont-webfont.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/Simpsonfont.ttf') format('truetype'), /* Safari, Android, iOS */
+  }
 
 .home{
     margin: 15px 10%;
+    font-family: 'Simpson';
+    
 }
 .menu a{
     text-decoration: none;

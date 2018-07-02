@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Simpson';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../media/fonts/akbar.ttf')
+}
 body {
   margin: 15px;
+  font-family: 'Simpson';
+}
+input[type=button]{
+  font-family: 'Simpson'
+}
+
+.test{
+  font-family: 'Simpson';
 }

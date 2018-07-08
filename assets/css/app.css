@@ -1,8 +1,6 @@
 @font-face {
   font-family: 'Simpson';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../media/fonts/akbar.ttf')
+  src: url('../media/fonts/Simpsonfont.ttf')
 }
 body {
   margin: 15px;

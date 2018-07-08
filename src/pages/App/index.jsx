@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Home, NotFound, About } from '../index';
+import { Home, NotFound, About, Cart, Favorites } from '../index';
 
 class App extends React.Component {
   render() {
@@ -13,6 +13,8 @@ class App extends React.Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/Cart" component={Cart} />
+          <Route exact path="/Favorites" component={Favorites} />
           <Route component={NotFound} />
         </Switch>
       </div>

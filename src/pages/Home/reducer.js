@@ -1,17 +1,30 @@
-export const homeReducer = (state = {number: 0}, action) => {
+export const homeReducer = (state = {
+  beers: [], cardevents: [], menulinks: [], popupBeer: {},
+}, action) => {
   switch (action.type) {
-    case 'INCREASE':
-      return Object.assign({}, state, { number: state.number + action.value });
+    case 'BEERS':
+      return Object.assign({}, state, { beers: action.value });
+    case 'SET-CARD':
+      const currentCardEvents = state.cardevents.slice();
+      currentCardEvents.push(action.objCard);
+      return Object.assign({}, state, { cardevents: currentCardEvents });
+    case 'REMOVE-CARDEVENT':
+      const stateCartEvents = state.cardevents.slice();
+      stateCartEvents.pop(action.objCard);
+      return Object.assign({}, state, { cardevents: stateCartEvents });
+    case 'SET-MENU':
+      return Object.assign({}, state, { menulinks: action.value });
+    case 'SHOW_POPUP_BEER':
+      return {
+        ...state,
+        popupBeer: action.value,
+      };
+    case 'REMOVE_POPUP_BEER':
+      return {
+        ...state,
+        popupBeer: {},
+      };
     default:
       return state;
-  }   
+  }
 };
-
-// (prevStat, action) => nextState
-
-const obj =  {
-  ime: 'David',
-};
-const obj2 = Object.assign({}, obj);
-
-const obj3 = { ...obj, ime: 'Joško' };

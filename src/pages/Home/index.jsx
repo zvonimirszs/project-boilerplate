@@ -12,7 +12,7 @@ import BeerNavigation from '../../components/BeerNavigation';
 import BeerMenu from '../../components/BeerMenu';
 
 import styles from './index.css';
-import { setCards, setCardEvents, showPopupBeer, removePopupBeer } from './action';
+import { setCardEvents, showPopupBeer, removePopupBeer } from './action';
 
 const beersJ = require('../App/db/beers');
 
@@ -117,10 +117,7 @@ const mapStateToProps = state => ({
 );
 
 const mapDispatchProps = dispatch => ({
-  setCards: beers => dispatch(setCards(beers)),
   setCardEvents: (objCard) => dispatch(setCardEvents(objCard)),
-  setCardEvn: (objCard) => dispatch(setCardEvn(objCard)),
-  //setMenu: menulinks => dispatch(setMenu(menulinks)),
   showPopupBeer: beer => dispatch(showPopupBeer(beer)),
   removePopupBeer: () => dispatch(removePopupBeer()),
 });
